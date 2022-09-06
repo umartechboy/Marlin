@@ -1,0 +1,672 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\techboy\Documents\GitHub\MinFDM\D6500\Firmware\Marlin> platformio run -e FYSETC_E4
+Processing FYSETC_E4 (platform: espressif32@2.1.0; board: esp32dev; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (2.1.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (esp-prog) External (esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.10004.210126 (1.0.4) 
+ - tool-esptoolpy @ 1.30000.201119 (3.0.0) 
+ - toolchain-xtensa32 @ 2.50200.97 (5.2.0)
+Converting Marlin.ino
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 31 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- AsyncTCP @ 1.1.1
+|-- ESP Async WebServer @ 1.2.3
+|   |-- AsyncTCP @ 1.1.1
+|   |-- FS @ 1.0
+|   |-- WiFi @ 1.0
+|-- ESP3DLib @ 1.0.11
+|   |-- DNSServer @ 1.1.0
+|   |   |-- WiFi @ 1.0
+|   |-- ESP32SSDP @ 1.1.1
+|   |   |-- WiFi @ 1.0
+|   |-- ESPmDNS @ 1.0
+|   |   |-- WiFi @ 1.0
+|   |-- FS @ 1.0
+|   |-- Preferences @ 1.0
+|   |-- SPIFFS @ 1.0
+|   |   |-- FS @ 1.0
+|   |-- Update @ 1.0
+|   |-- WebServer @ 1.0
+|   |   |-- WiFi @ 1.0
+|   |   |-- FS @ 1.0
+|   |-- WebSockets @ 2.3.4
+|   |   |-- WiFi @ 1.0
+|   |   |-- SPI @ 1.0
+|   |   |-- WiFiClientSecure @ 1.0
+|   |   |   |-- WiFi @ 1.0
+|   |-- WiFi @ 1.0
+|   |-- ArduinoOTA @ 1.0
+|   |   |-- Update @ 1.0
+|   |   |-- WiFi @ 1.0
+|   |   |-- ESPmDNS @ 1.0
+|   |   |   |-- WiFi @ 1.0
+|-- WebSockets @ 2.3.4
+|   |-- WiFi @ 1.0
+|   |-- SPI @ 1.0
+|   |-- WiFiClientSecure @ 1.0
+|   |   |-- WiFi @ 1.0
+|-- ESP32SSDP @ 1.1.1
+|   |-- WiFi @ 1.0
+|-- SPI @ 1.0
+|-- EEPROM @ 1.0.3
+|-- ArduinoOTA @ 1.0
+|   |-- Update @ 1.0
+|   |-- WiFi @ 1.0
+|   |-- ESPmDNS @ 1.0
+|   |   |-- WiFi @ 1.0
+|-- ESPmDNS @ 1.0
+|   |-- WiFi @ 1.0
+|-- WiFi @ 1.0
+|-- FS @ 1.0
+|-- SPIFFS @ 1.0
+|   |-- FS @ 1.0
+|-- Wire @ 1.0.1
+Building in release mode
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\FlushableHardwareSerial.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\HAL.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\HAL_SPI.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\Servo.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\Tone.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\WebSocketSerial.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\eeprom.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\i2s.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\ota.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\spiffs.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\timers.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\u8g_esp32_spi.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\web.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\wifi.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\shared\Delay.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\shared\HAL.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\shared\MinSerial.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\shared\eeprom_api.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\shared\esp_wifi.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\shared\servo.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\MarlinCore.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\core\serial.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\core\utility.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\calibrate\G28.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M200-M205.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M220.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M221.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M301.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M302.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M309.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M92.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M108_M112_M410.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M111.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M120_M121.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M17_M18_M84.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M211.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M400.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M80_M81.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M85.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M993_M994.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M997.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M999.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\T.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\eeprom\M500-M504.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\feature\digipot\M907-M910.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\gcode.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\gcode_d.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\geometry\G92.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\geometry\M206_M428.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\host\M110.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\host\M113.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\host\M114.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\host\M115.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\host\M118.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\host\M119.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\lcd\M145.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\motion\G0_G1.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\motion\G2_G3.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\motion\G4.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\parser.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\queue.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\stats\M31.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\stats\M75-M78.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M104_M109.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M105.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M106_M107.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M140_M190.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M141_M191.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M155.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M303.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\units\M82_M83.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\inc\Warnings.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\lcd\extui\ui_api.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\lcd\fontutils.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\lcd\marlinui.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\libs\buzzer.cpp.o
+Marlin/src/inc/Warnings.cpp:67:4: warning: #warning "Your Configuration provides no method to acquire user feedback!" [-Wcpp]
+   #warning "Your Configuration provides no method to acquire user feedback!"
+    ^
+cc1plus.exe: warning: unrecognized command line option '-Wno-register'
+Compiling .pio\build\FYSETC_E4\src\src\libs\crc16.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\libs\numtostr.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\libs\stopwatch.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\libs\vector_3.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\endstops.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\motion.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\planner.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\settings.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\stepper.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\stepper\indirection.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\temperature.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\tool_change.cpp.o
+Generating partitions .pio\build\FYSETC_E4\partitions.bin
+Compiling .pio\build\FYSETC_E4\lib3cd\AsyncTCP\AsyncTCP.cpp.o
+Compiling .pio\build\FYSETC_E4\lib612\FS\FS.cpp.o
+Marlin/src/module/temperature.cpp:2738:34: warning: unknown option after '#pragma GCC diagnostic' kind [-Wpragmas]
+   #pragma GCC diagnostic ignored "-Wimplicit-fallthrough"
+                                  ^
+Marlin/src/module/temperature.cpp: In static member function 'static void Temperature::isr()':
+Marlin/src/module/temperature.cpp:3597:36: warning: unknown option after '#pragma GCC diagnostic' kind [-Wpragmas]
+     #pragma GCC diagnostic ignored "-Wimplicit-fallthrough"
+                                    ^
+At global scope:
+cc1plus.exe: warning: unrecognized command line option '-Wno-register'
+Compiling .pio\build\FYSETC_E4\lib612\FS\vfs_api.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\ETH.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFi.cpp.o
+Archiving .pio\build\FYSETC_E4\lib3cd\libAsyncTCP.a
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiAP.cpp.o
+Archiving .pio\build\FYSETC_E4\lib612\libFS.a
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiClient.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiGeneric.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiMulti.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiSTA.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiScan.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiServer.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiUdp.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\AsyncEventSource.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\AsyncWebSocket.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\SPIFFSEditor.cpp.o
+Archiving .pio\build\FYSETC_E4\libeda\libWiFi.a
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\WebAuthentication.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\WebHandlers.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\WebRequest.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\WebResponses.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\WebServer.cpp.o
+Compiling .pio\build\FYSETC_E4\lib8be\DNSServer\DNSServer.cpp.o
+Archiving .pio\build\FYSETC_E4\lib8be\libDNSServer.a
+Compiling .pio\build\FYSETC_E4\libfea\ESP32SSDP\ESP32SSDP.cpp.o
+Compiling .pio\build\FYSETC_E4\lib9bb\ESPmDNS\ESPmDNS.cpp.o
+Compiling .pio\build\FYSETC_E4\lib653\Preferences\Preferences.cpp.o
+Archiving .pio\build\FYSETC_E4\libfea\libESP32SSDP.a
+Compiling .pio\build\FYSETC_E4\libab5\SPIFFS\SPIFFS.cpp.o
+Archiving .pio\build\FYSETC_E4\lib9bb\libESPmDNS.a
+Archiving .pio\build\FYSETC_E4\lib653\libPreferences.a
+Compiling .pio\build\FYSETC_E4\lib2b8\Update\Updater.cpp.o
+Compiling .pio\build\FYSETC_E4\lib750\WebServer\Parsing.cpp.o
+Archiving .pio\build\FYSETC_E4\libab5\libSPIFFS.a
+Compiling .pio\build\FYSETC_E4\lib750\WebServer\WebServer.cpp.o
+Archiving .pio\build\FYSETC_E4\lib2b8\libUpdate.a
+Archiving .pio\build\FYSETC_E4\libe8c\libESP Async WebServer.a
+Compiling .pio\build\FYSETC_E4\lib750\WebServer\detail\mimetable.cpp.o
+Compiling .pio\build\FYSETC_E4\lib7fc\SPI\SPI.cpp.o
+Compiling .pio\build\FYSETC_E4\lib270\WiFiClientSecure\WiFiClientSecure.cpp.o
+Compiling .pio\build\FYSETC_E4\lib270\WiFiClientSecure\ssl_client.cpp.o
+Archiving .pio\build\FYSETC_E4\lib7fc\libSPI.a
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\SocketIOclient.cpp.o
+Archiving .pio\build\FYSETC_E4\lib750\libWebServer.a
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\WebSockets.cpp.o
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\WebSocketsClient.cpp.o
+Archiving .pio\build\FYSETC_E4\lib270\libWiFiClientSecure.a
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\WebSocketsServer.cpp.o
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\libb64\cdecode.c.o
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\libb64\cencode.c.o
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\libsha1\libsha1.c.o
+Compiling .pio\build\FYSETC_E4\lib302\ArduinoOTA\ArduinoOTA.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\command.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\esp3dlib.cpp.o
+Archiving .pio\build\FYSETC_E4\libe48\libWebSockets.a
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\esp3dlibconfig.cpp.o
+Archiving .pio\build\FYSETC_E4\lib302\libArduinoOTA.a
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\espcom.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\sd_ESP32.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\serial2socket.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\web_server.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\wificonfig.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\wifiservices.cpp.o
+Compiling .pio\build\FYSETC_E4\libeae\EEPROM\EEPROM.cpp.o
+Compiling .pio\build\FYSETC_E4\lib939\Wire\Wire.cpp.o
+Archiving .pio\build\FYSETC_E4\libFrameworkArduinoVariant.a
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\Esp.cpp.o
+Archiving .pio\build\FYSETC_E4\libeae\libEEPROM.a
+Archiving .pio\build\FYSETC_E4\lib52d\libESP3DLib.a
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\FunctionalInterrupt.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\HardwareSerial.cpp.o
+Archiving .pio\build\FYSETC_E4\lib939\libWire.a
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\IPv6Address.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\cbuf.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-bt.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-ledc.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\main.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\FYSETC_E4\libFrameworkArduino.a
+Linking .pio\build\FYSETC_E4\firmware.elf
+Retrieving maximum program size .pio\build\FYSETC_E4\firmware.elf
+Building .pio\build\FYSETC_E4\firmware.bin
+Checking size .pio\build\FYSETC_E4\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [==        ]  15.3% (used 50136 bytes from 327680 bytes)
+Flash: [=======   ]  74.8% (used 980004 bytes from 1310720 bytes)
+esptool.py v3.0
+======================== [SUCCESS] Took 161.01 seconds ========================
+
+Environment    Status    Duration
+-------------  --------  ------------
+FYSETC_E4      SUCCESS   00:02:41.008
+========================= 1 succeeded in 00:02:41.008 ========================= 
+PS C:\Users\techboy\Documents\GitHub\MinFDM\D6500\Firmware\Marlin> echo "done" >"C:\Users\techboy\AppData\Local\Temp\ipc"
+PS C:\Users\techboy\Documents\GitHub\MinFDM\D6500\Firmware\Marlin> platformio run --target upload -e FYSETC_E4
+Processing FYSETC_E4 (platform: espressif32@2.1.0; board: esp32dev; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (2.1.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (esp-prog) External (esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES:
+ - framework-arduinoespressif32 @ 3.10004.210126 (1.0.4)
+ - tool-esptoolpy @ 1.30000.201119 (3.0.0)
+ - tool-mkspiffs @ 2.230.0 (2.30)
+ - toolchain-xtensa32 @ 2.50200.97 (5.2.0)
+Converting Marlin.ino
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 31 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- AsyncTCP @ 1.1.1
+|-- ESP Async WebServer @ 1.2.3
+|   |-- AsyncTCP @ 1.1.1
+|   |-- FS @ 1.0
+|   |-- WiFi @ 1.0
+|-- ESP3DLib @ 1.0.11
+|   |-- DNSServer @ 1.1.0
+|   |   |-- WiFi @ 1.0
+|   |-- ESP32SSDP @ 1.1.1
+|   |   |-- WiFi @ 1.0
+|   |-- ESPmDNS @ 1.0
+|   |   |-- WiFi @ 1.0
+|   |-- FS @ 1.0
+|   |-- Preferences @ 1.0
+|   |-- SPIFFS @ 1.0
+|   |   |-- FS @ 1.0
+|   |-- Update @ 1.0
+|   |-- WebServer @ 1.0
+|   |   |-- WiFi @ 1.0
+|   |   |-- FS @ 1.0
+|   |-- WebSockets @ 2.3.4
+|   |   |-- WiFi @ 1.0
+|   |   |-- SPI @ 1.0
+|   |   |-- WiFiClientSecure @ 1.0
+|   |   |   |-- WiFi @ 1.0
+|   |-- WiFi @ 1.0
+|   |-- ArduinoOTA @ 1.0
+|   |   |-- Update @ 1.0
+|   |   |-- WiFi @ 1.0
+|   |   |-- ESPmDNS @ 1.0
+|   |   |   |-- WiFi @ 1.0
+|-- WebSockets @ 2.3.4
+|   |-- WiFi @ 1.0
+|   |-- SPI @ 1.0
+|   |-- WiFiClientSecure @ 1.0
+|   |   |-- WiFi @ 1.0
+|-- ESP32SSDP @ 1.1.1
+|   |-- WiFi @ 1.0
+|-- SPI @ 1.0
+|-- EEPROM @ 1.0.3
+|-- ArduinoOTA @ 1.0
+|   |-- Update @ 1.0
+|   |-- WiFi @ 1.0
+|   |-- ESPmDNS @ 1.0
+|   |   |-- WiFi @ 1.0
+|-- ESPmDNS @ 1.0
+|   |-- WiFi @ 1.0
+|-- WiFi @ 1.0
+|-- FS @ 1.0
+|-- SPIFFS @ 1.0
+|   |-- FS @ 1.0
+|-- Wire @ 1.0.1
+Building in release mode
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\FlushableHardwareSerial.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\HAL.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\HAL_SPI.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\Servo.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\Tone.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\WebSocketSerial.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\eeprom.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\i2s.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\ota.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\spiffs.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\timers.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\u8g_esp32_spi.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\web.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\ESP32\wifi.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\shared\Delay.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\shared\HAL.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\shared\MinSerial.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\shared\eeprom_api.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\shared\esp_wifi.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\HAL\shared\servo.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\MarlinCore.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\core\serial.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\core\utility.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\calibrate\G28.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M200-M205.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M220.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M221.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M301.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M302.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M309.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\config\M92.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M108_M112_M410.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M111.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M120_M121.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M17_M18_M84.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M211.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M400.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M80_M81.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M85.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M993_M994.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M997.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\M999.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\control\T.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\eeprom\M500-M504.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\feature\digipot\M907-M910.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\gcode.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\gcode_d.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\geometry\G92.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\geometry\M206_M428.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\host\M110.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\host\M113.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\host\M114.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\host\M115.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\host\M118.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\host\M119.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\lcd\M145.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\motion\G0_G1.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\motion\G2_G3.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\motion\G4.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\parser.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\queue.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\stats\M31.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\stats\M75-M78.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M104_M109.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M105.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M106_M107.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M140_M190.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M141_M191.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M155.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\temp\M303.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\gcode\units\M82_M83.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\inc\Warnings.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\lcd\extui\ui_api.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\lcd\fontutils.cpp.o
+Marlin/src/inc/Warnings.cpp:67:4: warning: #warning "Your Configuration provides no method to acquire user feedback!" [-Wcpp]
+   #warning "Your Configuration provides no method to acquire user feedback!"
+    ^
+Compiling .pio\build\FYSETC_E4\src\src\lcd\marlinui.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\libs\buzzer.cpp.o
+cc1plus.exe: warning: unrecognized command line option '-Wno-register'
+Compiling .pio\build\FYSETC_E4\src\src\libs\crc16.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\libs\numtostr.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\libs\stopwatch.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\libs\vector_3.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\endstops.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\motion.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\planner.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\settings.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\stepper.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\stepper\indirection.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\temperature.cpp.o
+Compiling .pio\build\FYSETC_E4\src\src\module\tool_change.cpp.o
+Generating partitions .pio\build\FYSETC_E4\partitions.bin
+Compiling .pio\build\FYSETC_E4\lib3cd\AsyncTCP\AsyncTCP.cpp.o
+Compiling .pio\build\FYSETC_E4\lib612\FS\FS.cpp.o
+Marlin/src/module/temperature.cpp:2738:34: warning: unknown option after '#pragma GCC diagnostic' kind [-Wpragmas]
+   #pragma GCC diagnostic ignored "-Wimplicit-fallthrough"
+                                  ^
+Marlin/src/module/temperature.cpp: In static member function 'static void Temperature::isr()':
+Marlin/src/module/temperature.cpp:3597:36: warning: unknown option after '#pragma GCC diagnostic' kind [-Wpragmas]
+     #pragma GCC diagnostic ignored "-Wimplicit-fallthrough"
+                                    ^
+At global scope:
+cc1plus.exe: warning: unrecognized command line option '-Wno-register'
+Compiling .pio\build\FYSETC_E4\lib612\FS\vfs_api.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\ETH.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFi.cpp.o
+Archiving .pio\build\FYSETC_E4\lib3cd\libAsyncTCP.a
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiAP.cpp.o
+Archiving .pio\build\FYSETC_E4\lib612\libFS.a
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiClient.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiGeneric.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiMulti.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiSTA.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiScan.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiServer.cpp.o
+Compiling .pio\build\FYSETC_E4\libeda\WiFi\WiFiUdp.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\AsyncEventSource.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\AsyncWebSocket.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\SPIFFSEditor.cpp.o
+Archiving .pio\build\FYSETC_E4\libeda\libWiFi.a
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\WebAuthentication.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\WebHandlers.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\WebRequest.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\WebResponses.cpp.o
+Compiling .pio\build\FYSETC_E4\libe8c\ESP Async WebServer\WebServer.cpp.o
+Compiling .pio\build\FYSETC_E4\lib8be\DNSServer\DNSServer.cpp.o
+Archiving .pio\build\FYSETC_E4\lib8be\libDNSServer.a
+Compiling .pio\build\FYSETC_E4\libfea\ESP32SSDP\ESP32SSDP.cpp.o
+Compiling .pio\build\FYSETC_E4\lib9bb\ESPmDNS\ESPmDNS.cpp.o
+Compiling .pio\build\FYSETC_E4\lib653\Preferences\Preferences.cpp.o
+Archiving .pio\build\FYSETC_E4\libfea\libESP32SSDP.a
+Compiling .pio\build\FYSETC_E4\libab5\SPIFFS\SPIFFS.cpp.o
+Archiving .pio\build\FYSETC_E4\lib653\libPreferences.a
+Archiving .pio\build\FYSETC_E4\lib9bb\libESPmDNS.a
+Compiling .pio\build\FYSETC_E4\lib2b8\Update\Updater.cpp.o
+Compiling .pio\build\FYSETC_E4\lib750\WebServer\Parsing.cpp.o
+Archiving .pio\build\FYSETC_E4\libab5\libSPIFFS.a
+Compiling .pio\build\FYSETC_E4\lib750\WebServer\WebServer.cpp.o
+Archiving .pio\build\FYSETC_E4\lib2b8\libUpdate.a
+Compiling .pio\build\FYSETC_E4\lib750\WebServer\detail\mimetable.cpp.o
+Archiving .pio\build\FYSETC_E4\libe8c\libESP Async WebServer.a
+Compiling .pio\build\FYSETC_E4\lib7fc\SPI\SPI.cpp.o
+Compiling .pio\build\FYSETC_E4\lib270\WiFiClientSecure\WiFiClientSecure.cpp.o
+Archiving .pio\build\FYSETC_E4\lib7fc\libSPI.a
+Compiling .pio\build\FYSETC_E4\lib270\WiFiClientSecure\ssl_client.cpp.o
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\SocketIOclient.cpp.o
+Archiving .pio\build\FYSETC_E4\lib750\libWebServer.a
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\WebSockets.cpp.o
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\WebSocketsClient.cpp.o
+Archiving .pio\build\FYSETC_E4\lib270\libWiFiClientSecure.a
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\WebSocketsServer.cpp.o
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\libb64\cdecode.c.o
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\libb64\cencode.c.o
+Compiling .pio\build\FYSETC_E4\libe48\WebSockets\libsha1\libsha1.c.o
+Compiling .pio\build\FYSETC_E4\lib302\ArduinoOTA\ArduinoOTA.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\command.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\esp3dlib.cpp.o
+Archiving .pio\build\FYSETC_E4\libe48\libWebSockets.a
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\esp3dlibconfig.cpp.o
+Archiving .pio\build\FYSETC_E4\lib302\libArduinoOTA.a
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\espcom.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\sd_ESP32.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\serial2socket.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\web_server.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\wificonfig.cpp.o
+Compiling .pio\build\FYSETC_E4\lib52d\ESP3DLib\wifiservices.cpp.o
+Compiling .pio\build\FYSETC_E4\libeae\EEPROM\EEPROM.cpp.o
+Compiling .pio\build\FYSETC_E4\lib939\Wire\Wire.cpp.o
+Archiving .pio\build\FYSETC_E4\libFrameworkArduinoVariant.a
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\Esp.cpp.o
+Archiving .pio\build\FYSETC_E4\lib52d\libESP3DLib.a
+Archiving .pio\build\FYSETC_E4\libeae\libEEPROM.a
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\FunctionalInterrupt.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\HardwareSerial.cpp.o
+Archiving .pio\build\FYSETC_E4\lib939\libWire.a
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\IPv6Address.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\cbuf.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-bt.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-ledc.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\main.cpp.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\FYSETC_E4\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\FYSETC_E4\libFrameworkArduino.a
+Linking .pio\build\FYSETC_E4\firmware.elf
+Retrieving maximum program size .pio\build\FYSETC_E4\firmware.elf
+Building .pio\build\FYSETC_E4\firmware.bin
+Checking size .pio\build\FYSETC_E4\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [==        ]  15.3% (used 50136 bytes from 327680 bytes)
+Flash: [=======   ]  74.8% (used 980004 bytes from 1310720 bytes)
+esptool.py v3.0
+Configuring upload protocol...
+AVAILABLE: esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa 
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM5
+Uploading .pio\build\FYSETC_E4\firmware.bin
+esptool.py v3.0
+Serial port COM5
+Connecting....
+Chip is ESP32-D0WD-V3 (revision 3)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: e0:e2:e6:0c:32:84
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 500000
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 4MB
+Compressed 15872 bytes to 10319...
+Writing at 0x00001000... (100 %)
+Wrote 15872 bytes (10319 compressed) at 0x00001000 in 0.2 seconds (effective 550.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 128...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (128 compressed) at 0x00008000 in 0.0 seconds (effective 1540.1 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 4978.0 kbit/s)...
+Hash of data verified.
+Compressed 980112 bytes to 561333...
+Writing at 0x00010000... (2 %)
+Writing at 0x00014000... (5 %)
+Writing at 0x00018000... (8 %)
+Writing at 0x0001c000... (11 %)
+Writing at 0x00020000... (14 %)
+Writing at 0x00024000... (17 %)
+Writing at 0x00028000... (20 %)
+Writing at 0x0002c000... (22 %)
+Writing at 0x00030000... (25 %)
+Writing at 0x00034000... (28 %)
+Writing at 0x00038000... (31 %)
+Writing at 0x0003c000... (34 %)
+Writing at 0x00040000... (37 %)
+Writing at 0x00044000... (40 %)
+Writing at 0x00048000... (42 %)
+Writing at 0x0004c000... (45 %)
+Writing at 0x00050000... (48 %)
+Writing at 0x00054000... (51 %)
+Writing at 0x00058000... (54 %)
+Writing at 0x0005c000... (57 %)
+Writing at 0x00060000... (60 %)
+Writing at 0x00064000... (62 %)
+Writing at 0x00068000... (65 %)
+Writing at 0x0006c000... (68 %)
+Writing at 0x00070000... (71 %)
+Writing at 0x00074000... (74 %)
+Writing at 0x00078000... (77 %)
+Writing at 0x0007c000... (80 %)
+Writing at 0x00080000... (82 %)
+Writing at 0x00084000... (85 %)
+Writing at 0x00088000... (88 %)
+Writing at 0x0008c000... (91 %)
+Writing at 0x00090000... (94 %)
+Writing at 0x00094000... (97 %)
+Writing at 0x00098000... (100 %)
+Wrote 980112 bytes (561333 compressed) at 0x00010000 in 13.0 seconds (effective 602.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+===================== [SUCCESS] Took 182.15 seconds ===================== 
+
+Environment    Status    Duration
+-------------  --------  ------------
+FYSETC_E4      SUCCESS   00:03:02.149
+====================== 1 succeeded in 00:03:02.149 ====================== 
+PS C:\Users\techboy\Documents\GitHub\MinFDM\D6500\Firmware\Marlin> echo "done" >"C:\Users\techboy\AppData\Local\Temp\ipc"
+PS C:\Users\techboy\Documents\GitHub\MinFDM\D6500\Firmware\Marlin>  
