@@ -1,0 +1,224 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\techboy\Documents\GitHub\MinFDM\D6500\Firmware\Marlin> platformio run -e D6500
+Processing D6500 (platform: espressif32@2.1.0; board: esp32dev; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (2.1.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (esp-prog) External (esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.10004.210126 (1.0.4) 
+ - tool-esptoolpy @ 1.30000.201119 (3.0.0) 
+ - toolchain-xtensa32 @ 2.50200.97 (5.2.0)
+Converting Marlin.ino
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 26 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- SPI @ 1.0
+|-- EEPROM @ 1.0.3
+|-- ArduinoOTA @ 1.0
+|   |-- Update @ 1.0
+|   |-- WiFi @ 1.0
+|   |-- ESPmDNS @ 1.0
+|   |   |-- WiFi @ 1.0
+|-- ESPmDNS @ 1.0
+|   |-- WiFi @ 1.0
+|-- WiFi @ 1.0
+|-- FS @ 1.0
+|-- SPIFFS @ 1.0
+|   |-- FS @ 1.0
+|-- Wire @ 1.0.1
+Building in release mode
+Compiling .pio\build\D6500\src\src\HAL\ESP32\FlushableHardwareSerial.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\ESP32\HAL.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\ESP32\HAL_SPI.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\ESP32\Servo.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\ESP32\Tone.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\ESP32\WebSocketSerial.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\ESP32\eeprom.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\ESP32\i2s.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\ESP32\ota.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\ESP32\spiffs.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\ESP32\timers.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\ESP32\u8g_esp32_spi.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\ESP32\web.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\ESP32\wifi.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\shared\Delay.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\shared\HAL.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\shared\MinSerial.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\shared\eeprom_api.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\shared\esp_wifi.cpp.o
+Compiling .pio\build\D6500\src\src\HAL\shared\servo.cpp.o
+Compiling .pio\build\D6500\src\src\MarlinCore.cpp.o
+Compiling .pio\build\D6500\src\src\core\serial.cpp.o
+Compiling .pio\build\D6500\src\src\core\utility.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\calibrate\G28.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\config\M200-M205.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\config\M220.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\config\M221.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\config\M301.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\config\M302.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\config\M309.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\config\M92.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\control\M108_M112_M410.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\control\M111.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\control\M120_M121.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\control\M17_M18_M84.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\control\M211.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\control\M400.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\control\M80_M81.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\control\M85.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\control\M993_M994.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\control\M997.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\control\M999.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\control\T.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\eeprom\M500-M504.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\feature\digipot\M907-M910.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\gcode.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\gcode_d.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\geometry\G92.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\geometry\M206_M428.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\host\M110.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\host\M113.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\host\M114.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\host\M115.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\host\M118.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\host\M119.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\lcd\M145.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\motion\G0_G1.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\motion\G2_G3.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\motion\G4.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\parser.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\queue.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\stats\M31.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\stats\M75-M78.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\temp\M104_M109.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\temp\M105.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\temp\M106_M107.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\temp\M140_M190.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\temp\M141_M191.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\temp\M155.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\temp\M303.cpp.o
+Compiling .pio\build\D6500\src\src\gcode\units\M82_M83.cpp.o
+Compiling .pio\build\D6500\src\src\inc\Warnings.cpp.o
+Compiling .pio\build\D6500\src\src\lcd\extui\ui_api.cpp.o
+Compiling .pio\build\D6500\src\src\lcd\fontutils.cpp.o
+Compiling .pio\build\D6500\src\src\lcd\marlinui.cpp.o
+Compiling .pio\build\D6500\src\src\libs\buzzer.cpp.o
+Marlin\src\inc\Warnings.cpp:63:4: warning: #warning "Warning! Don't use dummy thermistors (998/999) for final build!" [-Wcpp]
+   #warning "Warning! Don't use dummy thermistors (998/999) for final build!"
+    ^
+Marlin\src\inc\Warnings.cpp:67:4: warning: #warning "Your Configuration provides no method to acquire user feedback!" [-Wcpp]
+   #warning "Your Configuration provides no method to acquire user feedback!"   
+    ^
+cc1plus.exe: warning: unrecognized command line option '-Wno-register'
+Compiling .pio\build\D6500\src\src\libs\crc16.cpp.o
+Compiling .pio\build\D6500\src\src\libs\numtostr.cpp.o
+Compiling .pio\build\D6500\src\src\libs\stopwatch.cpp.o
+Compiling .pio\build\D6500\src\src\libs\vector_3.cpp.o
+Compiling .pio\build\D6500\src\src\module\endstops.cpp.o
+Compiling .pio\build\D6500\src\src\module\motion.cpp.o
+Compiling .pio\build\D6500\src\src\module\planner.cpp.o
+Compiling .pio\build\D6500\src\src\module\settings.cpp.o
+Compiling .pio\build\D6500\src\src\module\stepper.cpp.o
+Compiling .pio\build\D6500\src\src\module\stepper\indirection.cpp.o
+Compiling .pio\build\D6500\src\src\module\temperature.cpp.o
+Compiling .pio\build\D6500\src\src\module\tool_change.cpp.o
+Generating partitions .pio\build\D6500\partitions.bin
+Compiling .pio\build\D6500\lib7fc\SPI\SPI.cpp.o
+Compiling .pio\build\D6500\libeae\EEPROM\EEPROM.cpp.o
+Archiving .pio\build\D6500\lib7fc\libSPI.a
+Compiling .pio\build\D6500\lib2b8\Update\Updater.cpp.o
+Marlin\src\module\temperature.cpp:2738:34: warning: unknown option after '#pragma GCC diagnostic' kind [-Wpragmas]
+   #pragma GCC diagnostic ignored "-Wimplicit-fallthrough"
+                                  ^
+Marlin\src\module\temperature.cpp: In static member function 'static void Temperature::isr()':
+Marlin\src\module\temperature.cpp:3597:36: warning: unknown option after '#pragma GCC diagnostic' kind [-Wpragmas]
+     #pragma GCC diagnostic ignored "-Wimplicit-fallthrough"
+                                    ^
+At global scope:
+cc1plus.exe: warning: unrecognized command line option '-Wno-register'
+Compiling .pio\build\D6500\libeda\WiFi\ETH.cpp.o
+Archiving .pio\build\D6500\libeae\libEEPROM.a
+Compiling .pio\build\D6500\libeda\WiFi\WiFi.cpp.o
+Compiling .pio\build\D6500\libeda\WiFi\WiFiAP.cpp.o
+Archiving .pio\build\D6500\lib2b8\libUpdate.a
+Compiling .pio\build\D6500\libeda\WiFi\WiFiClient.cpp.o
+Compiling .pio\build\D6500\libeda\WiFi\WiFiGeneric.cpp.o
+Compiling .pio\build\D6500\libeda\WiFi\WiFiMulti.cpp.o
+Compiling .pio\build\D6500\libeda\WiFi\WiFiSTA.cpp.o
+Compiling .pio\build\D6500\libeda\WiFi\WiFiScan.cpp.o
+Compiling .pio\build\D6500\libeda\WiFi\WiFiServer.cpp.o
+Compiling .pio\build\D6500\libeda\WiFi\WiFiUdp.cpp.o
+Compiling .pio\build\D6500\lib9bb\ESPmDNS\ESPmDNS.cpp.o
+Compiling .pio\build\D6500\lib302\ArduinoOTA\ArduinoOTA.cpp.o
+Compiling .pio\build\D6500\lib612\FS\FS.cpp.o
+Archiving .pio\build\D6500\libeda\libWiFi.a
+Compiling .pio\build\D6500\lib612\FS\vfs_api.cpp.o
+Archiving .pio\build\D6500\lib9bb\libESPmDNS.a
+Compiling .pio\build\D6500\libab5\SPIFFS\SPIFFS.cpp.o
+Archiving .pio\build\D6500\lib302\libArduinoOTA.a
+Compiling .pio\build\D6500\lib939\Wire\Wire.cpp.o
+Archiving .pio\build\D6500\libFrameworkArduinoVariant.a
+Compiling .pio\build\D6500\FrameworkArduino\Esp.cpp.o
+Archiving .pio\build\D6500\lib612\libFS.a
+Compiling .pio\build\D6500\FrameworkArduino\FunctionalInterrupt.cpp.o
+Archiving .pio\build\D6500\libab5\libSPIFFS.a
+Compiling .pio\build\D6500\FrameworkArduino\HardwareSerial.cpp.o
+Archiving .pio\build\D6500\lib939\libWire.a
+Compiling .pio\build\D6500\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\D6500\FrameworkArduino\IPv6Address.cpp.o
+Compiling .pio\build\D6500\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\D6500\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\D6500\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\D6500\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\D6500\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\D6500\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\D6500\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\D6500\FrameworkArduino\cbuf.cpp.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-bt.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-ledc.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\D6500\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\D6500\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\D6500\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\D6500\FrameworkArduino\main.cpp.o
+Compiling .pio\build\D6500\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\D6500\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\D6500\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\D6500\libFrameworkArduino.a
+Linking .pio\build\D6500\firmware.elf
+Building .pio\build\D6500\firmware.bin
+Retrieving maximum program size .pio\build\D6500\firmware.elf
+Checking size .pio\build\D6500\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]   5.9% (used 19188 bytes from 327680 bytes)
+Flash: [==        ]  21.8% (used 286078 bytes from 1310720 bytes)
+esptool.py v3.0
+======================== [SUCCESS] Took 129.22 seconds ========================
+
+Environment    Status    Duration
+-------------  --------  ------------
+D6500          SUCCESS   00:02:09.225
+========================= 1 succeeded in 00:02:09.225 ========================= 
+PS C:\Users\techboy\Documents\GitHub\MinFDM\D6500\Firmware\Marlin> echo "done" >"C:\Users\techboy\AppData\Local\Temp\ipc"
