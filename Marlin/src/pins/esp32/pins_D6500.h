@@ -40,6 +40,15 @@
 
 #include "pins_ESPA_common.h"
 
+// Override pin config for best routing
+// Step pins: [14], [16], [27], [33]
+// Dir, En Pins: [4], [12], [17], [21], [22], [25], [26], [32]
+// End Stops: 15, 34, 35
+// Fan: 13
+// Heater: 2
+// Temp: 36
+// end override pin config for best routing
+
 #if HAS_TMC_UART
   //
   // TMC2209 stepper drivers
@@ -65,8 +74,8 @@
  *       but MRR ESPA does not have enough spare pins for such reassignment.
  */
 #ifndef HARDWARE_SERIAL1_RX
-  #define HARDWARE_SERIAL1_RX                 21
+  #define HARDWARE_SERIAL1_RX                 -1
 #endif
 #ifndef HARDWARE_SERIAL1_TX
-  #define HARDWARE_SERIAL1_TX                 22
+  #define HARDWARE_SERIAL1_TX                 -1
 #endif

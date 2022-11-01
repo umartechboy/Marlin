@@ -42,21 +42,21 @@
 //
 // Steppers
 //
-#define X_STEP_PIN                            27
-#define X_DIR_PIN                             26
+#define X_STEP_PIN                            32
+#define X_DIR_PIN                             33
 #define X_ENABLE_PIN                          25
 
-#define Y_STEP_PIN                            33
-#define Y_DIR_PIN                             32
-#define Y_ENABLE_PIN                X_ENABLE_PIN
+#define Y_STEP_PIN                            26
+#define Y_DIR_PIN                             27
+#define Y_ENABLE_PIN                          14
 
-#define Z_STEP_PIN                            14
+#define Z_STEP_PIN                            16
 #define Z_DIR_PIN                             12
-#define Z_ENABLE_PIN                X_ENABLE_PIN
+#define Z_ENABLE_PIN                          4
 
-#define E0_STEP_PIN                           16
+#define E0_STEP_PIN                           22
 #define E0_DIR_PIN                            17
-#define E0_ENABLE_PIN               X_ENABLE_PIN
+#define E0_ENABLE_PIN                         21
 
 //
 // Temperature Sensors
