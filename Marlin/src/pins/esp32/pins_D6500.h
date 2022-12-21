@@ -37,6 +37,7 @@
 #endif
 
 #define BOARD_INFO_NAME       "D6500"
+#define D6500_0 1
 
 // Limit Switches
 //
@@ -56,13 +57,25 @@
 #define Y_DIR_PIN                             27
 #define Y_ENABLE_PIN                          14
 
+#if D6500_0
 #define Z_STEP_PIN                            16
 #define Z_DIR_PIN                             12
 #define Z_ENABLE_PIN                          4
+#else
+#define Z_STEP_PIN                            21
+#define Z_DIR_PIN                             12
+#define Z_ENABLE_PIN                          22
+#endif
 
+#if D6500_0
 #define E0_STEP_PIN                           22
 #define E0_DIR_PIN                            17
 #define E0_ENABLE_PIN                         21
+#else
+#define E0_STEP_PIN                           16
+#define E0_DIR_PIN                            4
+#define E0_ENABLE_PIN                         17
+#endif
 
 //
 // Temperature Sensors
@@ -73,8 +86,8 @@
 // Heaters / Fans
 //
 #define HEATER_0_PIN                           2
-//#define FAN_PIN                               13 // Can't manually control the fan
-#define HEATER_BED_PIN                         4
+#define FAN_PIN                                -1 // Can't manually control the fan
+#define HEATER_BED_PIN                         -1
 
 //
 // MicroSD card
