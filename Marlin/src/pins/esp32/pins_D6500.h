@@ -37,7 +37,7 @@
 #endif
 
 #define BOARD_INFO_NAME       "D6500"
-#define D6500_RouterPCB 0
+//#define D6500_RouterPCB   // Make this 1 
 
 // Limit Switches
 //
@@ -57,7 +57,7 @@
 #define Y_DIR_PIN                             27
 #define Y_ENABLE_PIN                          14
 
-#if D6500_RouterPCB
+#if ENABLED(D6500_RouterPCB)
 #define Z_STEP_PIN                            16
 #define Z_DIR_PIN                             12
 #define Z_ENABLE_PIN                          4
@@ -67,7 +67,7 @@
 #define Z_ENABLE_PIN                          22
 #endif
 
-#if D6500_RouterPCB
+#if ENABLED(D6500_RouterPCB)
 #define E0_STEP_PIN                           22
 #define E0_DIR_PIN                            17
 #define E0_ENABLE_PIN                         21
