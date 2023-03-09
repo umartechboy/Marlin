@@ -58,7 +58,7 @@
 #define Y_ENABLE_PIN                          14
 
 #if ENABLED(D6500_RouterPCB)
-#define Z_STEP_PIN                            16
+#define Z_STEP_PIN                            21
 #define Z_DIR_PIN                             12
 #define Z_ENABLE_PIN                          4
 #else
