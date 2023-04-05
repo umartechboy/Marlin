@@ -1427,6 +1427,9 @@
   #else
     #define NUM_SERIAL 2
   #endif
+#elif defined(ESP3D_WIFISUPPORT)
+  #define HAS_MULTI_SERIAL 1
+  #define NUM_SERIAL 2
 #elif defined(SERIAL_PORT)
   #define NUM_SERIAL 1
 #else

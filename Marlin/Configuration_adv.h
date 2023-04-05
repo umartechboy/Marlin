@@ -4145,28 +4145,6 @@
   #define MAC_ADDRESS { 0xDE, 0xAD, 0xBE, 0xEF, 0xF0, 0x0D }  // A MAC address unique to your network
 #endif
 
-/**
- * WiFi Support (Espressif ESP32 WiFi)
- */
-//#define WIFISUPPORT         // Marlin embedded WiFi managenent
-#define ESP3D_WIFISUPPORT   // ESP3D Library WiFi management (https://github.com/luc-github/ESP3DLib)
-
-#if EITHER(WIFISUPPORT, ESP3D_WIFISUPPORT)
-  #define WEBSUPPORT          // Start a webserver (which may include auto-discovery)
-  #define OTASUPPORT          // Support over-thMe-air firmware updates
-  #define WIFI_CUSTOM_COMMAND // Accept feature config commands (e.g., WiFi ESP3D) from the host
-
-  /**
-   * To set a default WiFi SSID / Password, create a file called Configuration_Secure.h with
-   * the following defines, customized for your network. This specific file is excluded via
-   * .gitignore to prevent it from accidentally leaking to the public.
-   *
-   *   #define WIFI_SSID "WiFi SSID"
-   *   #define WIFI_PWD  "WiFi Password"
-   */
-  //#include "Configuration_Secure.h" // External file with WiFi SSID / Password
-#endif
-
 // @section multi-material
 
 /**
