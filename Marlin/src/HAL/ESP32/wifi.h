@@ -25,6 +25,6 @@
 
 extern AsyncWebServer server;
 
-#define DEFAULT_WIFI_HOSTNAME "marlin"
+#define DEFAULT_WIFI_HOSTNAME "markhor"
 
 void wifi_init();
