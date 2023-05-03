@@ -1189,7 +1189,9 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 32.0512, 32.0512, 32.0512, 54.35 }
+// Measured    51.7360
+// Analytical: 52.0291
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 52.0291, 52.0291, 52.0291, 48.75 }
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 32.0512, 32.0512, 15.409, 54.35 }
 
 /**
@@ -1197,7 +1199,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 15, 20 }
+#define DEFAULT_MAX_FEEDRATE          { 80, 80, 15, 20 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
