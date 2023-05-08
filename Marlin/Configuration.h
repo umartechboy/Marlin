@@ -1191,7 +1191,7 @@
  */
 // Measured    51.7360
 // Analytical: 52.0291
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 52.0291, 52.0291, 52.0291, 48.75 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 52.0291, 52.0291, 52.0291, 47.33 }
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 32.0512, 32.0512, 15.409, 54.35 }
 
 /**
@@ -1664,7 +1664,7 @@
 // @section motion
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR true
+#define INVERT_X_DIR false
 #define INVERT_Y_DIR false
 #define INVERT_Z_DIR true
 //#define INVERT_I_DIR false
@@ -1677,7 +1677,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
