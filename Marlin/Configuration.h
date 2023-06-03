@@ -159,7 +159,8 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Markhor3D D6500"
+#define CUSTOM_MACHINE_NAME "Markhor3D D7500"
+//#define UseSuperSilentDrivers
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -870,7 +871,7 @@
  */
 
 #define THERMAL_PROTECTION_HOTENDS // Enable thermal protection for all extruders
-#define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
+//#define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
 #define THERMAL_PROTECTION_CHAMBER // Enable thermal protection for the heated chamber
 #define THERMAL_PROTECTION_COOLER  // Enable thermal protection for the laser cooling
 
@@ -1191,7 +1192,12 @@
  */
 // Measured    51.7360
 // Analytical: 52.0291
+#if defined(UseSuperSilentDrivers)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 208.1164, 208.1164, 52.0291, 47.33 }
+#else
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 52.0291, 52.0291, 52.0291, 47.33 }
+#endif
+
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 32.0512, 32.0512, 15.409, 54.35 }
 
 /**
@@ -1664,8 +1670,13 @@
 // @section motion
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
+#if defined(UseSuperSilentDrivers)
+#define INVERT_X_DIR true
+#define INVERT_Y_DIR true
+#else
 #define INVERT_X_DIR false
 #define INVERT_Y_DIR false
+#endif
 #define INVERT_Z_DIR true
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
