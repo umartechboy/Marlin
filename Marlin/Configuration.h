@@ -687,9 +687,14 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-  #define DEFAULT_Kp 32.03
-  #define DEFAULT_Ki 3.27
-  #define DEFAULT_Kd 78.44
+  // V5
+  #define DEFAULT_Kp 71.14
+  #define DEFAULT_Ki 9.10
+  #define DEFAULT_Kd 139.09
+  // < V5
+  // #define DEFAULT_Kp 32.03
+  // #define DEFAULT_Ki 3.27
+  // #define DEFAULT_Kd 78.44
   #endif
 #endif
 
@@ -1195,7 +1200,7 @@
 #if defined(UseSuperSilentDrivers)
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 208.1164, 208.1164, 52.0291, 47.33 }
 #else
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 52.0291, 52.0291, 52.0291, 47.33 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 52.0291, 52.0291, 208.116, 47.33 }
 #endif
 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 32.0512, 32.0512, 15.409, 54.35 }
@@ -1205,7 +1210,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 80, 80, 15, 20 }
+#define DEFAULT_MAX_FEEDRATE          { 80, 80, 60, 20 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1218,7 +1223,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 100, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 400, 10000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1675,9 +1680,9 @@
 #define INVERT_Y_DIR true
 #else
 #define INVERT_X_DIR false
-#define INVERT_Y_DIR false
+#define INVERT_Y_DIR true
 #endif
-#define INVERT_Z_DIR true
+#define INVERT_Z_DIR false
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
 //#define INVERT_K_DIR false
@@ -2129,7 +2134,7 @@
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
-#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
+#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (16*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
