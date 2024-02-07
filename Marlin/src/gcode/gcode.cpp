@@ -31,6 +31,11 @@ GcodeSuite gcode;
 #if ENABLED(WIFI_CUSTOM_COMMAND)
   extern bool wifi_custom_command(char * const command_ptr);
 #endif
+#if ENABLED(M3DPrintVueSupport)
+extern bool M1101();
+extern bool M1102();
+extern bool M1103();
+#endif
 
 #include "parser.h"
 #include "queue.h"
@@ -565,9 +570,9 @@ void GcodeSuite::process_parsed_command(const bool no_ok/*=false*/) {
         case 73: M73(); break;                                    // M73: Set progress percentage (for display on LCD)
       #endif
 
-      case 75: M75(); break;                                      // M75: Start print timer
+      case 75: M75(); M1101(); break;                                      // M75: Start print timer
       case 76: M76(); break;                                      // M76: Pause print timer
-      case 77: M77(); break;                                      // M77: Stop print timer
+      case 77: M77(); M1103(); break;                                      // M77: Stop print timer
 
       #if ENABLED(PRINTCOUNTER)
         case 78: M78(); break;                                    // M78: Show print statistics
@@ -1077,6 +1082,12 @@ void GcodeSuite::process_parsed_command(const bool no_ok/*=false*/) {
 
       #if ENABLED(UBL_MESH_WIZARD)
         case 1004: M1004(); break;                                // M1004: UBL Mesh Wizard
+      #endif
+
+      #if ENABLED(M3DPrintVueSupport)
+        case 1101: M1101(); break;                                // M1101 start a new time lapse
+        case 1102: M1102(); break;                                // M1102 trigger a time-lapse photo
+        case 1103: M1103(); break;                                // M1103 End a time lapse
       #endif
 
       #if ENABLED(MAX7219_GCODE)

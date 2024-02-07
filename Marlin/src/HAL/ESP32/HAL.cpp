@@ -27,6 +27,7 @@
 #include <driver/adc.h>
 #include <esp_adc_cal.h>
 #include <HardwareSerial.h>
+#include <soc/adc_channel.h>
 
 #if ENABLED(USE_ESP32_TASK_WDT)
   #include <esp_task_wdt.h>
@@ -118,9 +119,16 @@ struct {
 
 #endif
 
+#if ENABLED(M3DPrintVueSupport)
+  extern void M3DPrintVueSetup();
+  extern void M3DPrintVueLoop();
+#endif
 void MarlinHAL::init_board() {
   #if ENABLED(USE_ESP32_TASK_WDT)
     esp_task_wdt_init(10, true);
+  #endif
+  #if ENABLED(M3DPrintVueSupport)
+    M3DPrintVueSetup();
   #endif
   #if ENABLED(ESP3D_WIFISUPPORT)
     esp3dlib.init();
@@ -169,6 +177,9 @@ void MarlinHAL::idletask() {
     OTA_handle();
   #endif
   TERN_(ESP3D_WIFISUPPORT, esp3dlib.idletask());
+  #if ENABLED(M3DPrintVueSupport)
+    M3DPrintVueLoop();
+  #endif
 }
 
 uint8_t MarlinHAL::get_reset_source() { return rtc_get_reset_reason(1); }
@@ -208,6 +219,7 @@ int MarlinHAL::freeMemory() { return ESP.getFreeHeap(); }
 // ------------------------
 // ADC
 // ------------------------
+
 
 #define ADC1_CHANNEL(pin) ADC1_GPIO ## pin ## _CHANNEL
 

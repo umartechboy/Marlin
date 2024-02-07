@@ -127,6 +127,10 @@
 //#define WIFISUPPORT         // Marlin embedded WiFi managenent
 #define ESP3D_WIFISUPPORT   // ESP3D Library WiFi management (https://github.com/luc-github/ESP3DLib)
 
+// Enabling this will start a BLE server that broadcasts printer telemetry. 
+// This is required for M3D PrintVue in case board is an ESP32
+#define M3DPrintVueSupport
+
 #if EITHER(WIFISUPPORT, ESP3D_WIFISUPPORT)
   #define WEBSUPPORT          // Start a webserver (which may include auto-discovery)
   #define OTASUPPORT          // Support over-thMe-air firmware updates
@@ -2404,7 +2408,7 @@
  *
  * View the current statistics with M78.
  */
-//#define PRINTCOUNTER
+#define PRINTCOUNTER
 #if ENABLED(PRINTCOUNTER)
   #define PRINTCOUNTER_SAVE_INTERVAL 60 // (minutes) EEPROM save interval during print. A value of 0 will save stats at end of print.
 #endif
