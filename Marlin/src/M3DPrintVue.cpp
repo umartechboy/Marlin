@@ -6,26 +6,22 @@
 #include "module/motion.h"
 #include "module/temperature.h"
 
-#define debug_pv
-#if defined(debug_pv)
-#define PV_Debug(x) Serial.print(x)
-#define PV_Debugln(x) Serial.println(x)
-#else
-#define PV_Debug(x)
-#define PV_Debugln(x)
-#endif
-
 //#include <ArduinoBLE.h>
 
-#define comSerial Serial1
+//HardwareSerial Serial2(2);
+#define comSerial Serial2
 #define print_job_timer_status_totalPrints print_job_timer.getStats().totalPrints
 #define temp thermalManager.temp_hotend->celsius
+
+bool allowDebug = false;
+
 // M1101 start a new time lapse
 bool M1101()
 {
-    
-  PV_Debug("M1101 @ ");
-  PV_Debugln(print_job_timer_status_totalPrints);
+  if (allowDebug){
+    SERIAL_ECHO("M1101 @ ");
+    SERIAL_ECHOLN(print_job_timer_status_totalPrints);
+  }
   //if(comSerial.connected())
     comSerial.println(String("begin ") + String(print_job_timer_status_totalPrints));
   return true;
@@ -33,8 +29,10 @@ bool M1101()
 // M1102 trigger a time-lapse photo
 bool M1102()
 {
-  PV_Debug("M1102 @ ");
-  PV_Debugln(current_position.z);
+  if (allowDebug){
+    SERIAL_ECHO("M1102 @ ");
+    SERIAL_ECHOLN(current_position.z);
+  }
   //if(comSerial.connected())
     comSerial.println(String("inc ") + String(current_position.z)); 
   return true;
@@ -42,9 +40,20 @@ bool M1102()
 // M1103 End a time lapse
 bool M1103()
 {
-  PV_Debugln("M1103");
+  if (allowDebug){
+    SERIAL_ECHOLN("M1103");
+  }
   //if(comSerial.connected())
     comSerial.println(String("end "));
+  return true;
+}
+// PrintVue Debug On
+bool M1104()
+{
+  if (parser.seen('D'))
+    allowDebug =  parser.value_bool();
+  SERIAL_ECHO("PrintVue Debug: ");
+  SERIAL_ECHOLN(allowDebug?"ON":"OFF");
   return true;
 }
 
@@ -57,11 +66,14 @@ float lastT = -100;
 
 void M3DPrintVueSetup()
 {
-  PV_Debugln("M3DPrintVueSetup()");
+  if (allowDebug){
+    SERIAL_ECHO("M3DPrintVueSetup()");
+  }
   //comSerial.begin("M3D Enabler PV");
   //comSerial.register_callback(Bt_Status);
 
   comSerial.begin(115200, SERIAL_8N1, -1, 13);
+  comSerial.println("M3D Print Vue server connected");
 }
 void M3DPrintVueLoop()
 {  
@@ -70,40 +82,54 @@ void M3DPrintVueLoop()
     lastX = current_position.x;
     //if(comSerial.connected())
       comSerial.println(String("x ") + String(current_position.x));
-    PV_Debug("x change = ");
-    PV_Debugln(lastX);
+      
+    if (allowDebug){
+      SERIAL_ECHO("x change = ");
+      SERIAL_ECHOLN(lastX);
+    }
   }
   if (lastY != current_position.y)
   {
     lastY = current_position.y;
     //if(comSerial.connected())
       comSerial.println(String("y ") + String(current_position.y));
-    PV_Debug("y change = ");
-    PV_Debugln(lastY);
+    if (allowDebug){
+      SERIAL_ECHO("y change = ");
+      SERIAL_ECHOLN(lastY);
+    }
   }
   if (lastZ != current_position.z)
   {
     lastZ = current_position.z;
     //if(comSerial.connected())
       comSerial.println(String("z ") + String(current_position.z));
-    PV_Debug("z change = ");
-    PV_Debugln(lastZ);
+      
+    if (allowDebug){
+      SERIAL_ECHO("z change = ");
+      SERIAL_ECHOLN(lastZ);
+    }
   }
   if (lastE != current_position.e)
   {
     lastE = current_position.e;
     //if(comSerial.connected())
       comSerial.println(String("e ") + String(current_position.e));
-    PV_Debug("e change = ");
-    PV_Debugln(lastE);
+      
+    if (allowDebug){
+      SERIAL_ECHO("e change = ");
+      SERIAL_ECHOLN(lastE);
+    }
   }
   if (lastT != temp)
   {
     lastT = temp;
     //if(comSerial.connected())
       comSerial.println(String("x ") + String(temp));
-    PV_Debug("temp change = ");
-    PV_Debugln(lastT);
+      
+    if (allowDebug){
+      //SERIAL_ECHO("temp change = ");
+      //SERIAL_ECHOLN(lastT);
+    }
   }
 }
 

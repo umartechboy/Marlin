@@ -35,6 +35,7 @@ GcodeSuite gcode;
 extern bool M1101();
 extern bool M1102();
 extern bool M1103();
+extern bool M1104();
 #endif
 
 #include "parser.h"
@@ -1088,6 +1089,7 @@ void GcodeSuite::process_parsed_command(const bool no_ok/*=false*/) {
         case 1101: M1101(); break;                                // M1101 start a new time lapse
         case 1102: M1102(); break;                                // M1102 trigger a time-lapse photo
         case 1103: M1103(); break;                                // M1103 End a time lapse
+        case 1104: M1104(); break;                                // PriontView Debug Command
       #endif
 
       #if ENABLED(MAX7219_GCODE)

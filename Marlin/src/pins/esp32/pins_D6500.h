@@ -81,14 +81,22 @@
 // Temperature Sensors
 //
 #define TEMP_0_PIN                            36  // Analog Input
+#if ENABLED(M3DPrintVueSupport)
+#define TEMP_BED_PIN                          -1  // Disable Bed for PrintVue connections
+#else
 #define TEMP_BED_PIN                          39  // Analog Input
+#endif
 
 //
 // Heaters / Fans
 //
 #define HEATER_0_PIN                           2
 #define FAN_PIN                                -1 // Can't manually control the fan
+#if ENABLED(M3DPrintVueSupport)
+#define HEATER_BED_PIN                         -1 // Disable Bed for PrintVue connections
+#else
 #define HEATER_BED_PIN                         13
+#endif
 
 //
 // MicroSD card
