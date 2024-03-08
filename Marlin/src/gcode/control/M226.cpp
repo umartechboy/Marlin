@@ -39,8 +39,12 @@ void GcodeSuite::M226() {
               pin_state = parser.intval('S', -1); // required pin state - default is inverted
     const pin_t pin = GET_PIN_MAP_PIN(pin_number);
 
+    bool isProtected = pin_is_protected(pin);
+    if (parser.seen_test('F'))
+      isProtected = false; 
+
     if (WITHIN(pin_state, -1, 1) && pin > -1) {
-      if (pin_is_protected(pin))
+      if (isProtected)
         protected_pin_err();
       else {
         int target = LOW;
@@ -51,7 +55,10 @@ void GcodeSuite::M226() {
           case 0: target = LOW; break;
           case -1: target = !extDigitalRead(pin); break;
         }
+        
+        SERIAL_ECHO_MSG("Waiting for pin ", pin, " to become ", target);
         while (int(extDigitalRead(pin)) != target) idle();
+        SERIAL_ECHO_MSG("Pin state achieved");
       }
     } // pin_state -1 0 1 && pin > -1
   } // parser.seen('P')

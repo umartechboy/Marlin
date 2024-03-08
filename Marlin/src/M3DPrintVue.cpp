@@ -34,7 +34,7 @@ bool M1102()
     SERIAL_ECHOLN(current_position.z);
   }
   //if(comSerial.connected())
-    comSerial.println(String("inc ") + String(current_position.z)); 
+  comSerial.println(String("inc ") + String(current_position.z)); 
   return true;
 }
 // M1103 End a time lapse
